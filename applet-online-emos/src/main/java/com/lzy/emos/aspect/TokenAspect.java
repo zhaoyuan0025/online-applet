@@ -10,8 +10,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 /**
  * @program: applet-online-emos
  * @description: 通过切面将token响应返回对象中
@@ -39,7 +37,7 @@ public class TokenAspect {
      */
     @Around("aspect()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
-        Result result = (Result) joinPoint.proceed();
+        Result result = (Result) joinPoint.proceed(); //方法返回的结果进行强转
         String token = threadLocalToken.getToken();
         if (ObjectUtil.isNotEmpty(token)){
             result.setToken(token);
