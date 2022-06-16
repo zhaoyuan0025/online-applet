@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Data
 public class TestForm implements Serializable {
 
-    @NotBlank
+    @NotBlank(message = "用户名不能为空")
     @ApiModelProperty("姓名")
     private String username;
 }

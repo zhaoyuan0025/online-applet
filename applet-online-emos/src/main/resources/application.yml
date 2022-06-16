@@ -49,3 +49,11 @@ logging:
 #  pattern:
     # '%d{2100-01-01 13:14:00.666} [%thread] %-5level %logger{50} - %msg%n'
 #    console: "%d{HH:mm:ss} %-5level %msg%n"
+
+emos:
+  jwt:
+    #秘钥
+    secret: abc123456
+    expire: 5 #天
+    #令牌redis缓存的时间
+    cache-expire: 10

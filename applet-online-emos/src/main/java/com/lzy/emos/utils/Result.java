@@ -27,6 +27,11 @@ public class Result<T> implements Serializable {
     private String msg;
 
     /**
+     * token
+     */
+    private String token;
+
+    /**
      * 数据
      */
     private T data;
