@@ -1,0 +1,51 @@
+#配置Tomcat的信息
+server:
+  port: 1000
+  servlet:
+    context-path: /emos-api #访问的上下文路径
+  tomcat:
+    uri-encoding: utf-8 #字符集
+    threads:
+      max: 200
+      min-spare: 30
+    connection-timeout: 5000ms
+
+#配置mysql数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/applet_emos?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+      initial-size: 8
+      max-active: 16
+      min-idle: 8
+      max-wait: 60000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+  #redis的配置信息
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3000
+#    password:
+
+#配置mybatis的配置信息
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+#  type-aliases-package: com.lzy.emos.pojo
+
+#日志输出
+logging:
+  level:
+    root: info
+    com.lzy.emos.mapper: warn
+#  pattern:
+    # '%d{2100-01-01 13:14:00.666} [%thread] %-5level %logger{50} - %msg%n'
+#    console: "%d{HH:mm:ss} %-5level %msg%n"
