@@ -2,6 +2,7 @@ package com.lzy.emos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * @program: applet-online-emos
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2022-06-16 13:09
  **/
 @SpringBootApplication
+@ServletComponentScan
 public class OnlineEmosApplication {
 
     public static void main(String[] args) {

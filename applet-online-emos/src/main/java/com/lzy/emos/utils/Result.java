@@ -61,6 +61,7 @@ public class Result<T> implements Serializable {
         this.code = ResultCode.SUCCESS.getCode();
         this.msg = msg;
         this.data = data;
+        this.date = new Date();
     }
 
     public Result(Integer code, String msg) {

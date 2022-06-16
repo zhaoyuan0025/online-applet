@@ -2,7 +2,6 @@ package com.lzy.emos.config;
 
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
@@ -13,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * @create: 2022-03-09 16:01
  **/
 @Configuration
-public class ImoocWebMvcConfig extends WebMvcConfigurationSupport {
+public class SwaggerWebMvcConfig extends WebMvcConfigurationSupport {
 
     /**
      * 让 MVC 加载 Swagger 的静态资源
