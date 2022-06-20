@@ -1,6 +1,6 @@
 #配置Tomcat的信息
 server:
-  port: 1000
+  port: 9000
   servlet:
     context-path: /emos-api #访问的上下文路径
   tomcat:
@@ -27,10 +27,10 @@ spring:
       test-on-borrow: false
       test-on-return: false
   #redis的配置信息
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    timeout: 3000
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    timeout: 3000
 #    password:
 
 #配置mybatis的配置信息

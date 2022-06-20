@@ -2,7 +2,8 @@ package com.lzy.emos.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.client.RestTemplate;
+
 
 /**
  * @program: applet-online-emos
@@ -17,4 +18,9 @@ public class BeanConfig {
 //    public RedisTemplate redisTemplate(){
 //        return new RedisTemplate();
 //    }
+
+    @Bean("restTemplate")
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 }

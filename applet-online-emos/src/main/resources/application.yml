@@ -57,6 +57,8 @@ emos:
     expire: 5 #天
     #令牌redis缓存的时间
     cache-expire: 10
+#小程序的配置信息
 wx:
-  appid: xxxx
-  seccert: xxxx
+  app-id: xxxx
+  app-secret: xxxx
+
