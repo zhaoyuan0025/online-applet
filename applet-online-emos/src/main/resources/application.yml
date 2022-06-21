@@ -19,10 +19,10 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/applet_emos?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
       username: root
       password: 123456
-      initial-size: 8
-      max-active: 16
-      min-idle: 8
-      max-wait: 60000
+      initial-size: 8 #druid连接池初始化的连接数
+      max-active: 16 #最大的连接数
+      min-idle: 8 #
+      max-wait: 60000 #最大的等待时间
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
